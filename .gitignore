@@ -4,7 +4,6 @@
 psiphon-config.json
 psiphon-embedded-server-entries.txt
 PsiphonTunnel/build-git-commit.txt
-PsiphonTunnel.xcframework
 
 # Xcode
 #
