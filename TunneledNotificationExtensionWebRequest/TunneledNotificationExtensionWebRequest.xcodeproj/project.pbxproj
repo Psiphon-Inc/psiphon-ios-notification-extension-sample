@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A43AAE8E36570992004BF85 /* libPods-TunneledNotificationExtensionWebRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */; };
+		29AA36AB275571E0000647A0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AA36AA275571E0000647A0 /* NotificationService.swift */; };
+		29AA36AF275571E0000647A0 /* PsiphonNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		29AA36B527557482000647A0 /* psiphon-embedded-server-entries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */; };
+		29AA36B627557482000647A0 /* psiphon-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B427557481000647A0 /* psiphon-config.json */; };
+		29AA36B727557702000647A0 /* PsiphonTunnel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; };
+		29AA36B827557702000647A0 /* PsiphonTunnel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		29C625DA27553EC5000DF7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625D927553EC5000DF7C3 /* AppDelegate.swift */; };
+		29C625DC27553EC5000DF7C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625DB27553EC5000DF7C3 /* SceneDelegate.swift */; };
+		29C625DE27553EC5000DF7C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625DD27553EC5000DF7C3 /* ViewController.swift */; };
+		29C625E127553EC5000DF7C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C625DF27553EC5000DF7C3 /* Main.storyboard */; };
+		29C625E327553EC6000DF7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C625E227553EC6000DF7C3 /* Assets.xcassets */; };
+		29C625E627553EC6000DF7C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C625E427553EC6000DF7C3 /* LaunchScreen.storyboard */; };
+		E5BEB7AF5D12E557A996C46B /* libPods-PsiphonNotificationExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29AA36AD275571E0000647A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29C625CE27553EC5000DF7C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29AA36A7275571E0000647A0;
+			remoteInfo = PsiphonNotificationExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29AA36B927557702000647A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				29AA36B827557702000647A0 /* PsiphonTunnel.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29C625FD275540BE000DF7C3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29AA36AF275571E0000647A0 /* PsiphonNotificationExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsiphonNotificationExtension.release.xcconfig"; path = "Target Support Files/Pods-PsiphonNotificationExtension/Pods-PsiphonNotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
+		29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PsiphonTunnel.xcframework; sourceTree = "<group>"; };
+		29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PsiphonNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29AA36AA275571E0000647A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		29AA36AC275571E0000647A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "psiphon-embedded-server-entries.txt"; sourceTree = SOURCE_ROOT; };
+		29AA36B427557481000647A0 /* psiphon-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "psiphon-config.json"; sourceTree = SOURCE_ROOT; };
+		29AA36BA27557770000647A0 /* PsiphonNotificationExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PsiphonNotificationExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		29C625D627553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunneledNotificationExtensionWebRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C625D927553EC5000DF7C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29C625DB27553EC5000DF7C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		29C625DD27553EC5000DF7C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29C625E027553EC5000DF7C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29C625E227553EC6000DF7C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29C625E527553EC6000DF7C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29C625E727553EC6000DF7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29C625ED27553F3B000DF7C3 /* TunneledNotificationExtensionWebRequest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunneledNotificationExtensionWebRequest.entitlements; sourceTree = "<group>"; };
+		3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PsiphonNotificationExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776049E8190FF98A7AF27E90 /* Pods-NotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.release.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
+		8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TunneledNotificationExtensionWebRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AACDFA51D75031E84950544D /* Pods-NotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.debug.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig"; path = "Target Support Files/Pods-TunneledNotificationExtensionWebRequest/Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE81DEE0D637F87BA4595E4 /* libPods-NotificationExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunneledNotificationExtensionWebRequest.release.xcconfig"; path = "Target Support Files/Pods-TunneledNotificationExtensionWebRequest/Pods-TunneledNotificationExtensionWebRequest.release.xcconfig"; sourceTree = "<group>"; };
+		E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsiphonNotificationExtension.debug.xcconfig"; path = "Target Support Files/Pods-PsiphonNotificationExtension/Pods-PsiphonNotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29AA36A5275571E0000647A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BEB7AF5D12E557A996C46B /* libPods-PsiphonNotificationExtension.a in Frameworks */,
+				29AA36B727557702000647A0 /* PsiphonTunnel.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29C625D327553EC5000DF7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A43AAE8E36570992004BF85 /* libPods-TunneledNotificationExtensionWebRequest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CACB63A0115B6463B8BFB80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */,
+				CAE81DEE0D637F87BA4595E4 /* libPods-NotificationExtension.a */,
+				8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */,
+				3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29AA36A9275571E0000647A0 /* PsiphonNotificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				29AA36B427557481000647A0 /* psiphon-config.json */,
+				29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */,
+				29AA36AA275571E0000647A0 /* NotificationService.swift */,
+				29AA36AC275571E0000647A0 /* Info.plist */,
+				29AA36BA27557770000647A0 /* PsiphonNotificationExtension-Bridging-Header.h */,
+			);
+			path = PsiphonNotificationExtension;
+			sourceTree = "<group>";
+		};
+		29C625CD27553EC5000DF7C3 = {
+			isa = PBXGroup;
+			children = (
+				29C625D827553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */,
+				29AA36A9275571E0000647A0 /* PsiphonNotificationExtension */,
+				29C625D727553EC5000DF7C3 /* Products */,
+				56000C7AE34D810147C7750C /* Pods */,
+				0CACB63A0115B6463B8BFB80 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		29C625D727553EC5000DF7C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29C625D627553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest.app */,
+				29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29C625D827553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */ = {
+			isa = PBXGroup;
+			children = (
+				29C625ED27553F3B000DF7C3 /* TunneledNotificationExtensionWebRequest.entitlements */,
+				29C625D927553EC5000DF7C3 /* AppDelegate.swift */,
+				29C625DB27553EC5000DF7C3 /* SceneDelegate.swift */,
+				29C625DD27553EC5000DF7C3 /* ViewController.swift */,
+				29C625DF27553EC5000DF7C3 /* Main.storyboard */,
+				29C625E227553EC6000DF7C3 /* Assets.xcassets */,
+				29C625E427553EC6000DF7C3 /* LaunchScreen.storyboard */,
+				29C625E727553EC6000DF7C3 /* Info.plist */,
+			);
+			path = TunneledNotificationExtensionWebRequest;
+			sourceTree = "<group>";
+		};
+		56000C7AE34D810147C7750C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AACDFA51D75031E84950544D /* Pods-NotificationExtension.debug.xcconfig */,
+				776049E8190FF98A7AF27E90 /* Pods-NotificationExtension.release.xcconfig */,
+				B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */,
+				CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */,
+				E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */,
+				0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29AA36A7275571E0000647A0 /* PsiphonNotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29AA36B0275571E0000647A0 /* Build configuration list for PBXNativeTarget "PsiphonNotificationExtension" */;
+			buildPhases = (
+				77D7A2C59E523CE7DD7DDC3F /* [CP] Check Pods Manifest.lock */,
+				29AA36A4275571E0000647A0 /* Sources */,
+				29AA36A5275571E0000647A0 /* Frameworks */,
+				29AA36A6275571E0000647A0 /* Resources */,
+				29AA36B927557702000647A0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PsiphonNotificationExtension;
+			productName = PsiphonNotificationExtension;
+			productReference = 29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		29C625D527553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29C625EA27553EC6000DF7C3 /* Build configuration list for PBXNativeTarget "TunneledNotificationExtensionWebRequest" */;
+			buildPhases = (
+				2F302CE91A3B58E72AB6CAFE /* [CP] Check Pods Manifest.lock */,
+				29C625D227553EC5000DF7C3 /* Sources */,
+				29C625D327553EC5000DF7C3 /* Frameworks */,
+				29C625D427553EC5000DF7C3 /* Resources */,
+				29C625FD275540BE000DF7C3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29AA36AE275571E0000647A0 /* PBXTargetDependency */,
+			);
+			name = TunneledNotificationExtensionWebRequest;
+			productName = TunneledNotificationExtensionWebRequest;
+			productReference = 29C625D627553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29C625CE27553EC5000DF7C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					29AA36A7275571E0000647A0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					29C625D527553EC5000DF7C3 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 29C625D127553EC5000DF7C3 /* Build configuration list for PBXProject "TunneledNotificationExtensionWebRequest" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29C625CD27553EC5000DF7C3;
+			productRefGroup = 29C625D727553EC5000DF7C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29C625D527553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */,
+				29AA36A7275571E0000647A0 /* PsiphonNotificationExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29AA36A6275571E0000647A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AA36B527557482000647A0 /* psiphon-embedded-server-entries.txt in Resources */,
+				29AA36B627557482000647A0 /* psiphon-config.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29C625D427553EC5000DF7C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C625E627553EC6000DF7C3 /* LaunchScreen.storyboard in Resources */,
+				29C625E327553EC6000DF7C3 /* Assets.xcassets in Resources */,
+				29C625E127553EC5000DF7C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F302CE91A3B58E72AB6CAFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TunneledNotificationExtensionWebRequest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D7A2C59E523CE7DD7DDC3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PsiphonNotificationExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29AA36A4275571E0000647A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AA36AB275571E0000647A0 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29C625D227553EC5000DF7C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C625DE27553EC5000DF7C3 /* ViewController.swift in Sources */,
+				29C625DA27553EC5000DF7C3 /* AppDelegate.swift in Sources */,
+				29C625DC27553EC5000DF7C3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29AA36AE275571E0000647A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29AA36A7275571E0000647A0 /* PsiphonNotificationExtension */;
+			targetProxy = 29AA36AD275571E0000647A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29C625DF27553EC5000DF7C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C625E027553EC5000DF7C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29C625E427553EC6000DF7C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29C625E527553EC6000DF7C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29AA36B1275571E0000647A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PsiphonNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PsiphonNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psiphon3.ios.TunneledNotificationExtensionWebRequest.PsiphonNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PsiphonNotificationExtension/PsiphonNotificationExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29AA36B2275571E0000647A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PsiphonNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PsiphonNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psiphon3.ios.TunneledNotificationExtensionWebRequest.PsiphonNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PsiphonNotificationExtension/PsiphonNotificationExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29C625E827553EC6000DF7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29C625E927553EC6000DF7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29C625EB27553EC6000DF7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TunneledNotificationExtensionWebRequest/TunneledNotificationExtensionWebRequest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunneledNotificationExtensionWebRequest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psiphon3.ios.TunneledNotificationExtensionWebRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29C625EC27553EC6000DF7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TunneledNotificationExtensionWebRequest/TunneledNotificationExtensionWebRequest.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TunneledNotificationExtensionWebRequest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.psiphon3.ios.TunneledNotificationExtensionWebRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29AA36B0275571E0000647A0 /* Build configuration list for PBXNativeTarget "PsiphonNotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29AA36B1275571E0000647A0 /* Debug */,
+				29AA36B2275571E0000647A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29C625D127553EC5000DF7C3 /* Build configuration list for PBXProject "TunneledNotificationExtensionWebRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C625E827553EC6000DF7C3 /* Debug */,
+				29C625E927553EC6000DF7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29C625EA27553EC6000DF7C3 /* Build configuration list for PBXNativeTarget "TunneledNotificationExtensionWebRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29C625EB27553EC6000DF7C3 /* Debug */,
+				29C625EC27553EC6000DF7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29C625CE27553EC5000DF7C3 /* Project object */;
+}

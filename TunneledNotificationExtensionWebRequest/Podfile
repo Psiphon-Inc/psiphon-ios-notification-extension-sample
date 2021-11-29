@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+
+target 'TunneledNotificationExtensionWebRequest' do
+end
+
+target 'PsiphonNotificationExtension' do
+    pod 'OpenSSL-Universal', '1.0.2.17'
+    pod 'OCSPCache', :git => "https://github.com/Psiphon-Labs/OCSPCache.git", :commit => '71e9f5d'
+end
+
