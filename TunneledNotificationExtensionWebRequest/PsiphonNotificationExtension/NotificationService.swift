@@ -11,9 +11,9 @@ import UserNotifications
 
 import PsiphonTunnel
 
-class NotificationService: UNNotificationServiceExtension {
+var buffer: [UInt8]? = nil
 
-    var buffer = [UInt8]()
+class NotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
@@ -25,11 +25,11 @@ class NotificationService: UNNotificationServiceExtension {
     var psiphonTunnel: PsiphonTunnel?
 
     // OCSP cache for making OCSP requests in certificate revocation checking
-    var ocspCache: OCSPCache = OCSPCache.init(logger: { NSLog("[OCSPCache]:", $0) })
-
+    var ocspCache: OCSPCache = OCSPCache.init(logger: { NSLog("*[OCSPCache]:", $0) })
+    
     // Delegate for handling certificate validation.
     lazy var authURLSessionDelegate: OCSPAuthURLSessionDelegate =
-    OCSPAuthURLSessionDelegate.init(logger: {NSLog("[AuthURLSessionTaskDelegate]:", $0)},
+    OCSPAuthURLSessionDelegate.init(logger: {NSLog("*[AuthURLSessionTaskDelegate]:", $0)},
                                     ocspCache: self.ocspCache,
                                     modifyOCSPURL:{
         assert(self.httpProxyPort > 0)
@@ -38,7 +38,7 @@ class NotificationService: UNNotificationServiceExtension {
         let proxiedURLString = "http://127.0.0.1:\(self.httpProxyPort)/tunneled/\(encodedTargetURL!)"
         let proxiedURL = URL.init(string: proxiedURLString)
 
-        NSLog("[OCSP] Updated OCSP URL \($0) to \(proxiedURL!)")
+        NSLog("*[OCSP] Updated OCSP URL \($0) to \(proxiedURL!)")
 
         return proxiedURL!
     }, session:URLSession.shared, timeout:10)
@@ -52,18 +52,22 @@ class NotificationService: UNNotificationServiceExtension {
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
             
             // Reserves memory to simulate memory used by actual application
-            let success = allocateMemory(numberOfBytes: 9_000_000 /* 9 MB */)
-            guard success else {
-                bestAttemptContent.title = "Failed to allocate"
-                contentHandler(bestAttemptContent)
-                return
+            if buffer == nil {
+                let success = allocateMemory(numberOfBytes: 10_000_000 /* 9 MB */)
+                guard success else {
+                    displayNotification("Failed to allocate memory")
+                    return
+                }
+                NSLog("**Reserved memory")
+            } else {
+                NSLog("**Did not reserve memory")
             }
 
             psiphonTunnel = PsiphonTunnel.newPsiphonTunnel(self)
 
             // Start up the tunnel and begin connecting.
             // This could be started elsewhere or earlier.
-            NSLog("Starting tunnel")
+            NSLog("*Starting tunnel")
 
             guard let success = psiphonTunnel?.start(true), success else {
                 displayNotification("psiphonTunnel.start returned false")
@@ -73,7 +77,7 @@ class NotificationService: UNNotificationServiceExtension {
             // The Psiphon Library exposes reachability functions, which can be used for detecting internet status.
             let reachability = Reachability.forInternetConnection()
             let networkStatus = reachability?.currentReachabilityStatus()
-            NSLog("Internet is reachable? \(networkStatus != NotReachable)")
+            NSLog("*Internet is reachable? \(networkStatus != NotReachable)")
 
         }
     }
@@ -110,7 +114,7 @@ class NotificationService: UNNotificationServiceExtension {
         }
         
         for i in stride(from: 0, to: numberOfBytes, by: Int(page_size)) {
-            buffer[i] = UInt8(i % 7)
+            buffer![i] = UInt8(i % 7)
         }
         
         return true
@@ -265,14 +269,14 @@ extension NotificationService: TunneledAppDelegate {
         // Alternatively, it could be a string literal in the code, or whatever makes sense.
 
         guard let psiphonConfigUrl = Bundle.main.url(forResource: "psiphon-config", withExtension: "json") else {
-            NSLog("Error getting Psiphon config resource file URL!")
+            NSLog("*Error getting Psiphon config resource file URL!")
             return nil
         }
 
         do {
             return try String.init(contentsOf: psiphonConfigUrl)
         } catch {
-            NSLog("Error reading Psiphon config resource file!")
+            NSLog("*Error reading Psiphon config resource file!")
             return nil
         }
     }
@@ -281,24 +285,24 @@ extension NotificationService: TunneledAppDelegate {
     /// * returns: The string of the contents of the file.
     func getEmbeddedServerEntries() -> String? {
         guard let psiphonEmbeddedServerEntriesUrl = Bundle.main.url(forResource: "psiphon-embedded-server-entries", withExtension: "txt") else {
-            NSLog("Error getting Psiphon embedded server entries resource file URL!")
+            NSLog("*Error getting Psiphon embedded server entries resource file URL!")
             return nil
         }
 
         do {
             return try String.init(contentsOf: psiphonEmbeddedServerEntriesUrl)
         } catch {
-            NSLog("Error reading Psiphon embedded server entries resource file!")
+            NSLog("*Error reading Psiphon embedded server entries resource file!")
             return nil
         }
     }
 
     func onDiagnosticMessage(_ message: String, withTimestamp timestamp: String) {
-        NSLog("onDiagnosticMessage(%@): %@", timestamp, message)
+        NSLog("*onDiagnosticMessage(%@): %@", timestamp, message)
     }
 
     func onConnected() {
-        NSLog("onConnected")
+        NSLog("*onConnected")
 
         // After we're connected, make tunneled requests
 
