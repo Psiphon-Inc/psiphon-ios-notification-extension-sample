@@ -11,9 +11,9 @@ import UserNotifications
 
 import PsiphonTunnel
 
-class NotificationService: UNNotificationServiceExtension {
+var buffer: [UInt8]? = nil
 
-    var buffer = [UInt8]()
+class NotificationService: UNNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
@@ -52,12 +52,17 @@ class NotificationService: UNNotificationServiceExtension {
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
             
             // Reserves memory to simulate memory used by actual application
-            let success = allocateMemory(numberOfBytes: 9_000_000 /* 9 MB */)
-            guard success else {
-                bestAttemptContent.title = "Failed to allocate"
-                contentHandler(bestAttemptContent)
-                return
+            if buffer == nil {
+                let success = allocateMemory(numberOfBytes: 10_000_000 /* 9 MB */)
+                guard success else {
+                    displayNotification("Failed to allocate memory")
+                    return
+                }
+                NSLog("**Reserved memory")
+            } else {
+                NSLog("**Did not reserve memory")
             }
+
 
             psiphonTunnel = PsiphonTunnel.newPsiphonTunnel(self)
 
@@ -110,7 +115,7 @@ class NotificationService: UNNotificationServiceExtension {
         }
         
         for i in stride(from: 0, to: numberOfBytes, by: Int(page_size)) {
-            buffer[i] = UInt8(i % 7)
+            buffer![i] = UInt8(i % 7)
         }
         
         return true
