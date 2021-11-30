@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A43AAE8E36570992004BF85 /* libPods-TunneledNotificationExtensionWebRequest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */; };
 		29AA36AB275571E0000647A0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AA36AA275571E0000647A0 /* NotificationService.swift */; };
 		29AA36AF275571E0000647A0 /* PsiphonNotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29AA36B527557482000647A0 /* psiphon-embedded-server-entries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */; };
@@ -20,7 +19,6 @@
 		29C625E127553EC5000DF7C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C625DF27553EC5000DF7C3 /* Main.storyboard */; };
 		29C625E327553EC6000DF7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C625E227553EC6000DF7C3 /* Assets.xcassets */; };
 		29C625E627553EC6000DF7C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C625E427553EC6000DF7C3 /* LaunchScreen.storyboard */; };
-		E5BEB7AF5D12E557A996C46B /* libPods-PsiphonNotificationExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +57,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsiphonNotificationExtension.release.xcconfig"; path = "Target Support Files/Pods-PsiphonNotificationExtension/Pods-PsiphonNotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
 		29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PsiphonTunnel.xcframework; sourceTree = "<group>"; };
 		29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PsiphonNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AA36AA275571E0000647A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -76,14 +73,6 @@
 		29C625E527553EC6000DF7C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29C625E727553EC6000DF7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29C625ED27553F3B000DF7C3 /* TunneledNotificationExtensionWebRequest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunneledNotificationExtensionWebRequest.entitlements; sourceTree = "<group>"; };
-		3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PsiphonNotificationExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		776049E8190FF98A7AF27E90 /* Pods-NotificationExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.release.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.release.xcconfig"; sourceTree = "<group>"; };
-		8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TunneledNotificationExtensionWebRequest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AACDFA51D75031E84950544D /* Pods-NotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationExtension.debug.xcconfig"; path = "Target Support Files/Pods-NotificationExtension/Pods-NotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig"; path = "Target Support Files/Pods-TunneledNotificationExtensionWebRequest/Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig"; sourceTree = "<group>"; };
-		CAE81DEE0D637F87BA4595E4 /* libPods-NotificationExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NotificationExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TunneledNotificationExtensionWebRequest.release.xcconfig"; path = "Target Support Files/Pods-TunneledNotificationExtensionWebRequest/Pods-TunneledNotificationExtensionWebRequest.release.xcconfig"; sourceTree = "<group>"; };
-		E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PsiphonNotificationExtension.debug.xcconfig"; path = "Target Support Files/Pods-PsiphonNotificationExtension/Pods-PsiphonNotificationExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5BEB7AF5D12E557A996C46B /* libPods-PsiphonNotificationExtension.a in Frameworks */,
 				29AA36B727557702000647A0 /* PsiphonTunnel.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A43AAE8E36570992004BF85 /* libPods-TunneledNotificationExtensionWebRequest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,9 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */,
-				CAE81DEE0D637F87BA4595E4 /* libPods-NotificationExtension.a */,
-				8E29C7490C1B6AC2F4A0C5BD /* libPods-TunneledNotificationExtensionWebRequest.a */,
-				3B2832ED014577553232EF7B /* libPods-PsiphonNotificationExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,7 +120,6 @@
 				29C625D827553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */,
 				29AA36A9275571E0000647A0 /* PsiphonNotificationExtension */,
 				29C625D727553EC5000DF7C3 /* Products */,
-				56000C7AE34D810147C7750C /* Pods */,
 				0CACB63A0115B6463B8BFB80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -165,19 +148,6 @@
 			path = TunneledNotificationExtensionWebRequest;
 			sourceTree = "<group>";
 		};
-		56000C7AE34D810147C7750C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AACDFA51D75031E84950544D /* Pods-NotificationExtension.debug.xcconfig */,
-				776049E8190FF98A7AF27E90 /* Pods-NotificationExtension.release.xcconfig */,
-				B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */,
-				CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */,
-				E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */,
-				0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,7 +155,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29AA36B0275571E0000647A0 /* Build configuration list for PBXNativeTarget "PsiphonNotificationExtension" */;
 			buildPhases = (
-				77D7A2C59E523CE7DD7DDC3F /* [CP] Check Pods Manifest.lock */,
 				29AA36A4275571E0000647A0 /* Sources */,
 				29AA36A5275571E0000647A0 /* Frameworks */,
 				29AA36A6275571E0000647A0 /* Resources */,
@@ -204,7 +173,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29C625EA27553EC6000DF7C3 /* Build configuration list for PBXNativeTarget "TunneledNotificationExtensionWebRequest" */;
 			buildPhases = (
-				2F302CE91A3B58E72AB6CAFE /* [CP] Check Pods Manifest.lock */,
 				29C625D227553EC5000DF7C3 /* Sources */,
 				29C625D327553EC5000DF7C3 /* Frameworks */,
 				29C625D427553EC5000DF7C3 /* Resources */,
@@ -279,53 +247,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2F302CE91A3B58E72AB6CAFE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TunneledNotificationExtensionWebRequest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77D7A2C59E523CE7DD7DDC3F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PsiphonNotificationExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		29AA36A4275571E0000647A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -377,7 +298,6 @@
 /* Begin XCBuildConfiguration section */
 		29AA36B1275571E0000647A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E1BEDC3B501A81C09983EA /* Pods-PsiphonNotificationExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -406,7 +326,6 @@
 		};
 		29AA36B2275571E0000647A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F61937FCB0AC66362A6D7E6 /* Pods-PsiphonNotificationExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -551,7 +470,6 @@
 		};
 		29C625EB27553EC6000DF7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9643A0C1F0E1B332FA14E02 /* Pods-TunneledNotificationExtensionWebRequest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -582,7 +500,6 @@
 		};
 		29C625EC27553EC6000DF7C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF5815921541DF3CDCD721B /* Pods-TunneledNotificationExtensionWebRequest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

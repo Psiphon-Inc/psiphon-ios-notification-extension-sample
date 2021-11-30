@@ -24,25 +24,6 @@ class NotificationService: UNNotificationServiceExtension {
     // The instance of PsiphonTunnel we'll use for connecting.
     var psiphonTunnel: PsiphonTunnel?
 
-    // OCSP cache for making OCSP requests in certificate revocation checking
-    var ocspCache: OCSPCache = OCSPCache.init(logger: { NSLog("[OCSPCache]:", $0) })
-
-    // Delegate for handling certificate validation.
-    lazy var authURLSessionDelegate: OCSPAuthURLSessionDelegate =
-    OCSPAuthURLSessionDelegate.init(logger: {NSLog("[AuthURLSessionTaskDelegate]:", $0)},
-                                    ocspCache: self.ocspCache,
-                                    modifyOCSPURL:{
-        assert(self.httpProxyPort > 0)
-
-        let encodedTargetURL = URLEncode.encode($0.absoluteString)
-        let proxiedURLString = "http://127.0.0.1:\(self.httpProxyPort)/tunneled/\(encodedTargetURL!)"
-        let proxiedURL = URL.init(string: proxiedURLString)
-
-        NSLog("[OCSP] Updated OCSP URL \($0) to \(proxiedURL!)")
-
-        return proxiedURL!
-    }, session:URLSession.shared, timeout:10)
-
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
@@ -52,7 +33,7 @@ class NotificationService: UNNotificationServiceExtension {
             bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
             
             // Reserves memory to simulate memory used by actual application
-            let success = allocateMemory(numberOfBytes: 9_000_000 /* 9 MB */)
+            let success = allocateMemory(numberOfBytes: 10_500_000 /* 9 MB */)
             guard success else {
                 bestAttemptContent.title = "Failed to allocate"
                 contentHandler(bestAttemptContent)
@@ -151,7 +132,7 @@ extension NotificationService {
         // config.connectionProxyDictionary?[kCFStreamPropertyHTTPSProxyHost as String] = "127.0.0.1"
         // config.connectionProxyDictionary?[kCFStreamPropertyHTTPSProxyPort as String] = self.httpProxyPort
 
-        let session = URLSession.init(configuration: config, delegate: authURLSessionDelegate, delegateQueue: OperationQueue.current)
+        let session = URLSession(configuration: config)
 
         // Create the URLSession task that will make the request via the tunnel proxy.
         let task = session.dataTask(with: request) {
@@ -210,9 +191,9 @@ extension NotificationService {
         assert(httpProxyPort > 0)
 
         // The target URL must be encoded so as to be valid within a query parameter.
-        let encodedTargetURL = URLEncode.encode(url)
+        let encodedTargetURL = url.URLEncoded
 
-        let proxiedURL = "http://127.0.0.1:\(httpProxyPort)/tunneled/\(encodedTargetURL!)"
+        let proxiedURL = "http://127.0.0.1:\(httpProxyPort)/tunneled/\(encodedTargetURL)"
 
         let task = URLSession.shared.dataTask(with: URL(string: proxiedURL)!) {
             (data: Data?, response: URLResponse?, error: Error?) in
@@ -366,3 +347,24 @@ extension NotificationService: TunneledAppDelegate {
     }
 }
 
+extension String {
+    
+    // Encode all reserved characters. See: https://stackoverflow.com/a/34788364.
+    //
+    // From RFC 3986 (https://www.ietf.org/rfc/rfc3986.txt):
+    //
+    //   2.3.  Unreserved Characters
+    //
+    //   Characters that are allowed in a URI but do not have a reserved
+    //   purpose are called unreserved.  These include uppercase and lowercase
+    //   letters, decimal digits, hyphen, period, underscore, and tilde.
+    //
+    //   unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
+    var URLEncoded:String {
+        let unreservedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~"
+        let unreservedCharsSet: CharacterSet = CharacterSet(charactersIn: unreservedChars)
+        let encodedString = self.addingPercentEncoding(withAllowedCharacters: unreservedCharsSet)!
+        return encodedString
+    }
+    
+}
