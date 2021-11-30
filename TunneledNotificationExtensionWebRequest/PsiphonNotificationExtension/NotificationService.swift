@@ -78,6 +78,7 @@ class NotificationService: UNNotificationServiceExtension {
         psiphonTunnel?.stop()
         bestAttemptContent!.body = "\(body) [display notif]"
         contentHandler!(bestAttemptContent!)
+        exit(0) // We seem to be leaking memory somewhere, this is a sample app, so for now we'll just exit the process after processing the notification.
     }
 
     // Simulates memory used by the actual application by allocating `numberOfBytes` of memory.
