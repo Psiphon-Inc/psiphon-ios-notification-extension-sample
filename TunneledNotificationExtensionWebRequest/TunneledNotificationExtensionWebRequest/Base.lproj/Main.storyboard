@@ -18,7 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background the app to receive push notification through the Notification Service Extension" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2X-Bs-wWZ">
-                                <rect key="frame" x="60" y="418" width="294" height="61"/>
+                                <rect key="frame" x="60" y="180" width="294" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="UnO-8A-XoV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-o5-whp">
+                                <rect key="frame" x="67.5" y="315" width="279" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="0t5-0g-Qew"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connect tunnel and send HTTP request"/>
+                                <connections>
+                                    <action selector="connectAndMakeRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTH-3b-7CR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtF-8E-eTl">
+                                <rect key="frame" x="40" y="400" width="334" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,15 +48,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y2X-Bs-wWZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="3zX-57-yhZ"/>
-                            <constraint firstItem="Y2X-Bs-wWZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hjl-YL-HAS"/>
+                            <constraint firstItem="Y2X-Bs-wWZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8n8-GB-qA8"/>
+                            <constraint firstItem="BtF-8E-eTl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6G-mK-vCV"/>
+                            <constraint firstItem="BtF-8E-eTl" firstAttribute="top" secondItem="wPP-o5-whp" secondAttribute="bottom" constant="54" id="Eh6-hM-abC"/>
+                            <constraint firstAttribute="trailing" secondItem="BtF-8E-eTl" secondAttribute="trailing" constant="40" id="Fsy-nW-gmU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y2X-Bs-wWZ" secondAttribute="trailing" constant="40" id="PoK-lo-UfG"/>
-                            <constraint firstItem="Y2X-Bs-wWZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zfp-wX-rnQ"/>
+                            <constraint firstItem="wPP-o5-whp" firstAttribute="top" secondItem="Y2X-Bs-wWZ" secondAttribute="bottom" constant="74" id="Tw8-Qx-Dyv"/>
+                            <constraint firstItem="BtF-8E-eTl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="hAm-Cg-szD"/>
+                            <constraint firstItem="wPP-o5-whp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tPw-Bg-T5c"/>
+                            <constraint firstItem="Y2X-Bs-wWZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="136" id="unb-Wi-Eiv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="BtF-8E-eTl" id="6ki-iq-I4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="62"/>
+            <point key="canvasLocation" x="92.753623188405811" y="61.607142857142854"/>
         </scene>
     </scenes>
     <resources>

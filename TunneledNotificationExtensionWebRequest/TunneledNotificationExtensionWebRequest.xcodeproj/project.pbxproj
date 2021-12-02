@@ -12,7 +12,16 @@
 		29AA36B527557482000647A0 /* psiphon-embedded-server-entries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */; };
 		29AA36B627557482000647A0 /* psiphon-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B427557481000647A0 /* psiphon-config.json */; };
 		29AA36B727557702000647A0 /* PsiphonTunnel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; };
-		29AA36B827557702000647A0 /* PsiphonTunnel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		29C564A12757CF5F0021A7BD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A02757CF5F0021A7BD /* Utils.swift */; };
+		29C564A22757CF5F0021A7BD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A02757CF5F0021A7BD /* Utils.swift */; };
+		29C564A32757D1770021A7BD /* psiphon-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B427557481000647A0 /* psiphon-config.json */; };
+		29C564A42757D1790021A7BD /* psiphon-embedded-server-entries.txt in Resources */ = {isa = PBXBuildFile; fileRef = 29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */; };
+		29C564A62757D7410021A7BD /* PsiphonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A52757D7410021A7BD /* PsiphonConfig.swift */; };
+		29C564A72757D7410021A7BD /* PsiphonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A52757D7410021A7BD /* PsiphonConfig.swift */; };
+		29C564A92757D7F60021A7BD /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A82757D7F60021A7BD /* Requests.swift */; };
+		29C564AA2757D7F60021A7BD /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C564A82757D7F60021A7BD /* Requests.swift */; };
+		29C564AB2757DFEB0021A7BD /* PsiphonTunnel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; };
+		29C564AC2757DFEB0021A7BD /* PsiphonTunnel.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29AA369D2755670A000647A0 /* PsiphonTunnel.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29C625DA27553EC5000DF7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625D927553EC5000DF7C3 /* AppDelegate.swift */; };
 		29C625DC27553EC5000DF7C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625DB27553EC5000DF7C3 /* SceneDelegate.swift */; };
 		29C625DE27553EC5000DF7C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C625DD27553EC5000DF7C3 /* ViewController.swift */; };
@@ -32,13 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		29AA36B927557702000647A0 /* Embed Frameworks */ = {
+		29C564AD2757DFEB0021A7BD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				29AA36B827557702000647A0 /* PsiphonTunnel.xcframework in Embed Frameworks */,
+				29C564AC2757DFEB0021A7BD /* PsiphonTunnel.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,9 +70,13 @@
 		29AA36A8275571E0000647A0 /* PsiphonNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PsiphonNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AA36AA275571E0000647A0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		29AA36AC275571E0000647A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "psiphon-embedded-server-entries.txt"; sourceTree = SOURCE_ROOT; };
-		29AA36B427557481000647A0 /* psiphon-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "psiphon-config.json"; sourceTree = SOURCE_ROOT; };
+		29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "psiphon-embedded-server-entries.txt"; path = "Shared/psiphon-embedded-server-entries.txt"; sourceTree = SOURCE_ROOT; };
+		29AA36B427557481000647A0 /* psiphon-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "psiphon-config.json"; path = "Shared/psiphon-config.json"; sourceTree = SOURCE_ROOT; };
 		29AA36BA27557770000647A0 /* PsiphonNotificationExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PsiphonNotificationExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		29C564A02757CF5F0021A7BD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		29C564A52757D7410021A7BD /* PsiphonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsiphonConfig.swift; sourceTree = "<group>"; };
+		29C564A82757D7F60021A7BD /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		29C564AE2757EC200021A7BD /* PsiphonNotificationExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PsiphonNotificationExtension.entitlements; sourceTree = "<group>"; };
 		29C625D627553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TunneledNotificationExtensionWebRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C625D927553EC5000DF7C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29C625DB27553EC5000DF7C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C564AB2757DFEB0021A7BD /* PsiphonTunnel.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +119,7 @@
 		29AA36A9275571E0000647A0 /* PsiphonNotificationExtension */ = {
 			isa = PBXGroup;
 			children = (
-				29AA36B427557481000647A0 /* psiphon-config.json */,
-				29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */,
+				29C564AE2757EC200021A7BD /* PsiphonNotificationExtension.entitlements */,
 				29AA36AA275571E0000647A0 /* NotificationService.swift */,
 				29AA36AC275571E0000647A0 /* Info.plist */,
 				29AA36BA27557770000647A0 /* PsiphonNotificationExtension-Bridging-Header.h */,
@@ -114,9 +127,22 @@
 			path = PsiphonNotificationExtension;
 			sourceTree = "<group>";
 		};
+		29C5649F2757CF530021A7BD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				29AA36B427557481000647A0 /* psiphon-config.json */,
+				29AA36B327557481000647A0 /* psiphon-embedded-server-entries.txt */,
+				29C564A02757CF5F0021A7BD /* Utils.swift */,
+				29C564A52757D7410021A7BD /* PsiphonConfig.swift */,
+				29C564A82757D7F60021A7BD /* Requests.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		29C625CD27553EC5000DF7C3 = {
 			isa = PBXGroup;
 			children = (
+				29C5649F2757CF530021A7BD /* Shared */,
 				29C625D827553EC5000DF7C3 /* TunneledNotificationExtensionWebRequest */,
 				29AA36A9275571E0000647A0 /* PsiphonNotificationExtension */,
 				29C625D727553EC5000DF7C3 /* Products */,
@@ -158,7 +184,6 @@
 				29AA36A4275571E0000647A0 /* Sources */,
 				29AA36A5275571E0000647A0 /* Frameworks */,
 				29AA36A6275571E0000647A0 /* Resources */,
-				29AA36B927557702000647A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +202,7 @@
 				29C625D327553EC5000DF7C3 /* Frameworks */,
 				29C625D427553EC5000DF7C3 /* Resources */,
 				29C625FD275540BE000DF7C3 /* Embed App Extensions */,
+				29C564AD2757DFEB0021A7BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,7 +267,9 @@
 			files = (
 				29C625E627553EC6000DF7C3 /* LaunchScreen.storyboard in Resources */,
 				29C625E327553EC6000DF7C3 /* Assets.xcassets in Resources */,
+				29C564A42757D1790021A7BD /* psiphon-embedded-server-entries.txt in Resources */,
 				29C625E127553EC5000DF7C3 /* Main.storyboard in Resources */,
+				29C564A32757D1770021A7BD /* psiphon-config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				29AA36AB275571E0000647A0 /* NotificationService.swift in Sources */,
+				29C564AA2757D7F60021A7BD /* Requests.swift in Sources */,
+				29C564A72757D7410021A7BD /* PsiphonConfig.swift in Sources */,
+				29C564A22757CF5F0021A7BD /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +293,10 @@
 			files = (
 				29C625DE27553EC5000DF7C3 /* ViewController.swift in Sources */,
 				29C625DA27553EC5000DF7C3 /* AppDelegate.swift in Sources */,
+				29C564A62757D7410021A7BD /* PsiphonConfig.swift in Sources */,
+				29C564A92757D7F60021A7BD /* Requests.swift in Sources */,
 				29C625DC27553EC5000DF7C3 /* SceneDelegate.swift in Sources */,
+				29C564A12757CF5F0021A7BD /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +333,7 @@
 		29AA36B1275571E0000647A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PsiphonNotificationExtension/PsiphonNotificationExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
@@ -327,6 +362,7 @@
 		29AA36B2275571E0000647A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PsiphonNotificationExtension/PsiphonNotificationExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
@@ -478,6 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TunneledNotificationExtensionWebRequest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -508,6 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6HLNEX92A;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TunneledNotificationExtensionWebRequest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
