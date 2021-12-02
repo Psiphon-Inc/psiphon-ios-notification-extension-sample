@@ -74,6 +74,7 @@ class NotificationService: UNNotificationServiceExtension {
     // Stops tunnel and displays notification with the given body.
     func displayNotification(_ body: String) {
         psiphonTunnel?.stop()
+        psiphonTunnel = nil
         bestAttemptContent!.body = "\(body) [display notif]"
         contentHandler!(bestAttemptContent!)
     }
@@ -138,8 +139,11 @@ extension NotificationService: TunneledAppDelegate {
 
         // After we're connected, make tunneled requests
 
-        DispatchQueue.global(qos: .default).async {
+        DispatchQueue.global(qos: .default).async { [weak self] in
             
+            guard let self = self else {
+                return
+            }
 
             let url = "https://freegeoip.app/json/"
 
