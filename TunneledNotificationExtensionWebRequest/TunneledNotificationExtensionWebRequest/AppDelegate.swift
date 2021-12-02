@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         registerForPushNotifications()
         
+//        checkDataRootDirectoryIsExcludedFromBackup()
+        
         return true
     }
     
@@ -97,4 +99,28 @@ extension AppDelegate {
         
     }
     
+}
+
+func checkDataRootDirectoryIsExcludedFromBackup() {
+    do {
+        let dataRootDir = try getPsiphonDataRootDirectory().deletingLastPathComponent()
+        
+        let enumerator = FileManager.default.enumerator(atPath: dataRootDir.path)!
+        for item in enumerator {
+            do {
+                let fileURL = dataRootDir.appendingPathComponent(item as! String)
+                print("item: \(fileURL)")
+                
+                let resourceValues = try fileURL.resourceValues(forKeys: [.isExcludedFromBackupKey])
+                print("isExcluded: \(String(describing: resourceValues.isExcludedFromBackup))")
+                print("")
+                
+            } catch  {
+                print("Error:", error)
+            }
+        }
+    } catch {
+        print("Error:", error)
+    }
+
 }
